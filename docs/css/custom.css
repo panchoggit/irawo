@@ -1,0 +1,736 @@
+@charset "UTF-8";
+/*----------------------------------------
+PATRONES DE COLORES
+-----------------------------------------*/
+/*
+$texto:#111111;
+$principal:#12AFAF;
+$secundario:#009500;
+$bg-header-two: #064e4e;
+ */
+/*----------------------------------------
+ESTILOS BASE
+-----------------------------------------*/
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../webfonts/open-sans.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../webfonts/open-sans.eot?#iefix") format("embedded-opentype"), url("../webfonts/open-sans.woff2") format("woff2"), url("../webfonts/open-sans.woff") format("woff"), url("../webfonts/open-sans.ttf") format("truetype"), url("../webfonts/open-sans.svg#OpenSans") format("svg");
+  /* Legacy iOS */
+}
+
+html {
+  font-size: 15px;
+}
+
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  color: #111111;
+}
+
+/*----------------------------------------
+ESTILOS DE BOOTSTRAP REESCRITOS
+-----------------------------------------*/
+.btn-primary {
+  color: #fff;
+  background-color: #068706;
+  border-color: transparent;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active:hover {
+  background-color: #009500;
+  border-color: transparent;
+}
+
+/*----------------------------------------
+BIENVENIDOS
+-----------------------------------------*/
+.bienvenidos {
+  background: url("../images/fondo-peq-2.jpg") no-repeat center top;
+  color: #fff;
+  background-size: cover;
+  background-attachment: fixed !important;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#cosar {
+  color: blue;
+}
+
+/*----------------------------------------
+ENCABEZADO
+-----------------------------------------*/
+.encabezado {
+  background: #212122;
+  color: #fff;
+  padding: .5rem 0;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.encabezado.fondo-menu {
+  background: #0F560F;
+  padding: .8rem 0;
+}
+
+.encabezado .logo img {
+  width: 180px;
+  height: auto;
+}
+
+.encabezado .container-fluid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+/*----------------------------------------
+REDES SOCIALES
+-----------------------------------------*/
+.redes-sociales {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  margin: 0rem 0rem 0rem auto;
+  padding: 0;
+}
+
+.redes-sociales a {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0 .5rem;
+  opacity: .7;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  border-top: 0px !important;
+}
+
+.redes-sociales a:hover {
+  opacity: 1;
+}
+
+/*----------------------------------------
+BOTON MENU
+-----------------------------------------*/
+.boton-menu {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  border: 0;
+  font-size: 2rem;
+  margin: 0rem 0rem 0rem .1rem;
+  padding: 0 .5rem;
+  background: transparent;
+  color: #fff;
+}
+
+.boton-menu:focus {
+  outline: 0;
+}
+
+/*----------------------------------------
+BOTON REGRESAR
+-----------------------------------------*/
+.ir-arriba {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 3rem;
+  color: #0F560F;
+  text-decoration: none;
+  z-index: 99999;
+  line-height: 0;
+  display: none;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.ir-arriba:hover, .ir-arriba:focus {
+  outline: 0;
+  text-decoration: none;
+  color: #fff;
+}
+
+/*----------------------------------------
+MENU PRINCIPAL
+-----------------------------------------*/
+#menu-principal {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+#menu-principal ul {
+  padding: 0;
+  list-style: none;
+  margin: 1rem 0 0 0;
+}
+
+#menu-principal ul a {
+  display: block;
+  padding: .8rem 0;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  border-top: 1px solid #8c8888;
+  text-decoration: none;
+}
+
+#menu-principal ul a:hover, #menu-principal ul li.active a {
+  color: #068706;
+}
+
+/*----------------------------------------
+TEXTO ENCABEZADO
+-----------------------------------------*/
+.texto-encabezado {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.texto-encabezado .display-4 {
+  margin-top: 4rem;
+}
+
+.texto-encabezado .btn-primary {
+  margin-top: 1rem;
+}
+
+/*----------------------------------------
+FLECHA PARA BAJAR DE ENCABEZADO
+-----------------------------------------*/
+.flecha-bajar a {
+  display: inline-block;
+  color: #fff;
+  font-size: 4rem;
+  -webkit-animation: flecha-animada 2s ease-in-out infinite;
+          animation: flecha-animada 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes flecha-animada {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes flecha-animada {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+/*-----------------------------------------------------------------------------------------------------
+                                        ESTILOS DE SECCIONES
+-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------
+SECCION NOSOTROS
+------------------------------*/
+.nosotros {
+  background: #423F3C;
+  color: #fff;
+}
+
+.nosotros img {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+/*----------------------------
+SECCION NUESTROS SERVICIOS
+----------------------------*/
+.nuestros-servicios h2 span {
+  color: #068706;
+}
+
+.nuestros-servicios ul,
+.nuestros-servicios ul li {
+  list-style: none;
+}
+
+.nuestros-servicios ul li img {
+  height: 4.7rem;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.nuestros-servicios ul li .contenedor-eleccion h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: .8rem;
+}
+
+.nuestros-servicios ul li {
+  min-height: 9rem;
+}
+
+/*-------------------------------
+SECCION SERVICIOS
+--------------------------------*/
+.servicios {
+  background: url("../images/fondo-contacto-peq.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed !important;
+  color: #fff;
+}
+
+.servicios article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0;
+}
+
+.servicios img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60px;
+          flex: 0 0 60px;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.servicios h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.servicios h3 a {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+.servicios h3 a::after {
+  content: "\f054";
+  font-family: FontAwesome;
+  font-size: 2rem;
+  margin-left: 1rem;
+  opacity: .5;
+  position: relative;
+  left: 0;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.servicios h3 a:hover::after {
+  left: -.5rem;
+  opacity: 1;
+  color: #068706;
+}
+
+/*-------------------------------
+SECCION CONTACTANOS
+--------------------------------*/
+.contactanos {
+  background: url("../images/fondo-contacto-peq.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed !important;
+  color: #fff;
+}
+
+.contactanos article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0;
+}
+
+.contactanos img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60px;
+          flex: 0 0 60px;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.contactanos h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.contactanos h3 a {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+.contactanos h3 a::after {
+  content: "\f054";
+  font-family: FontAwesome;
+  font-size: 2rem;
+  margin-left: 1rem;
+  opacity: .5;
+  position: relative;
+  left: 0;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.contactanos h3 a:hover::after {
+  left: -.5rem;
+  opacity: 1;
+  color: #068706;
+}
+
+/*---------------------------------
+SECCION ÚLTIMOS PROYECTOS
+------------------------------------*/
+/* .ultimos-proyectos a {
+    text-decoration: none;
+}
+.ultimos-proyectos a h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: $texto;
+}
+.ultimos-proyectos .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+.ultimos-proyectos .owl-nav {
+    display: flex;
+    justify-content: center;
+    margin: .3rem 0;
+}
+.ultimos-proyectos .owl-prev,
+.ultimos-proyectos .owl-next {
+    font-size: 3rem;
+    margin: 0 .5rem;
+    color: $principal;
+    transition: all .5s ease;
+}
+.ultimos-proyectos .owl-prev:hover,
+.ultimos-proyectos .owl-next:hover {
+    color: $secundario;
+} */
+/*----------------------------------------
+SECCION PIE DE PAGINA
+-----------------------------------------*/
+.piedepagina {
+  background: #111111;
+  color: #fff;
+  text-align: center;
+  font-size: .9rem;
+}
+
+/*---------------------------------------------
+EMPIEZAN LAS MEDIAS QUERIES
+--------------------------------------------*/
+@media (max-width: 320px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 430px) {
+  .redes-sociales {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .texto-encabezado .display-4 {
+    margin-top: 7rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .text-sm-center {
+    text-align: center !important;
+  }
+  .col-sm-6 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .bienvenidos {
+    background: url("../images/fondo-grande-2.jpg") no-repeat center top;
+    background-size: cover;
+  }
+  .redes-sociales {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  #menu-principal {
+    height: auto !important;
+    display: block;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    margin-left: auto;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  #menu-principal ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 0 0 0;
+  }
+  #menu-principal ul li a {
+    padding: .8rem;
+    text-transform: capitalize;
+    margin: 0 .3rem;
+    border-top: 0px;
+    border-bottom: 4px solid transparent;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  #menu-principal ul li.active a,
+  #menu-principal ul li a:hover {
+    color: #068706;
+    border-bottom: 4px solid;
+  }
+  /*
+    .servicios article {
+        margin: 1rem 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center
+    }
+    .servicios img {
+        flex: 0 0 160px;
+        overflow: hidden;
+        margin-right: 0;
+        margin-bottom: 1rem;
+        transition: all 1s ease
+    }
+    .servicios article:hover img {
+        transform: rotateY(360deg);
+        transform-style: preserve-3d
+    }
+    .servicios h3 a::after {
+        content: ""
+    }
+    .servicios h3 {
+        margin: 0 0 .5rem 0;
+        font-size: 1.5rem;
+        flex: 0 1 auto;
+        width: 100%
+    }
+    .servicios h3 a {
+        display: block;
+        width: 100%
+    }
+    .servicios p {
+        width: 100%
+    }
+    .servicios .btn-secondary {
+        margin-top: auto
+    }
+    .paginas-internas .lista-servicios .col-md-4 {
+        display: flex
+    }
+    .paginas-internas .lista-servicios .item-servicios {
+        display: flex;
+        flex-direction: column
+    }
+    .paginas-internas .lista-servicios .item-servicios .btn-primary {
+        margin-top: auto
+    }
+ */
+}
+
+@media (min-width: 992px) {
+  html {
+    font-size: 16px;
+  }
+  .nuestros-servicios ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 7rem;
+  }
+  .nuestros-servicios ul li:hover img {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+  }
+  .nuestros-servicios ul:first-child img {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-left: 1rem;
+    margin-right: 0;
+  }
+  .contenedor-eleccion {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 0px;
+            flex: 1 0 0px;
+  }
+  .nuestros-servicios ul li .contenedor-eleccion h4 {
+    margin-top: 0;
+    font-size: 1rem;
+  }
+  .nuestros-servicios ul li p {
+    font-size: .85rem;
+    width: 100%;
+  }
+  /*
+    .servicios {
+        background: url("../images/fondo-contacto-grande.jpg") no-repeat center center;
+        background-size: cover
+    }
+ */
+  .contactanos {
+    background: url("../images/fondo-contacto-grande.jpg") no-repeat center center;
+    background-size: cover;
+  }
+}
+
+/*-----------------------------------------------------------------------------------------------------
+                                        ESTILOS DE OTRAS PAGINA
+-----------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------
+ESTILOS PAGINA NOSOTROS
+--------------------------------------------*/
+/*
+.paginas-internas .bienvenidos {
+    height: 50vh;
+}
+.paginas-internas .ruta {
+    background: $principal;
+    color: #fff;
+}
+.paginas-internas .ruta a {
+    color: #fff;
+    text-decoration: underline;
+}
+.paginas-internas .ruta a:hover {
+    text-decoration: none
+}
+.paginas-internas .panel .panel-heading {
+    font-size: 1.2rem;
+}
+.paginas-internas .panel .panel-heading a {
+    background: $principal;
+    color: #fff;
+    display: block;
+    padding: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all .5s ease;
+}
+.paginas-internas .panel .panel-heading a:hover {
+    background: $secundario;
+    color: #fff;
+}
+*/
+/*-------------------------------------------
+ESTILOS PAGINA SERVICIOS
+--------------------------------------------*/
+/*
+.paginas-internas .lista-servicios {
+    background: $secundario;
+}
+.paginas-internas .lista-servicios .item-servicios {
+    background: #ffffff;
+    text-align: center;
+    border: 5px solid #057705;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+.paginas-internas .lista-servicios .item-servicios .fa {
+    font-size: 6rem;
+    color: $principal;
+    margin-bottom: 1rem;
+    transition: all 1s ease;
+}
+.paginas-internas .lista-servicios .item-servicios:hover .fa {
+    transform: rotateY(360deg);
+    transform-style: preserve-3d;
+}
+
+
+*/
+/*# sourceMappingURL=custom.css.map */
